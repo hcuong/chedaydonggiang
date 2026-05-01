@@ -421,31 +421,26 @@ section {
   position: relative;
   aspect-ratio: 4 / 5;
   border-radius: 16px;
-  background: linear-gradient(135deg, var(--soft-beige), var(--gold) 60%, var(--sage-soft));
+  background: #2f4032;
   box-shadow: var(--shadow-lg);
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+}
+
+.hero-visual img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 70% center;
 }
 
 .hero-visual::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: url('/assets/patterns.jpg') center / cover;
-  opacity: 0.35;
-  mix-blend-mode: multiply;
-}
-
-.hero-visual .placeholder {
-  position: relative;
-  z-index: 1;
-  text-align: center;
-  color: var(--brown);
-  font-family: var(--font-script);
-  font-size: 28px;
-  padding: 32px;
+  background: radial-gradient(ellipse at 30% 20%, rgba(255, 255, 255, 0.12), transparent 55%),
+    linear-gradient(180deg, transparent 50%, rgba(0, 0, 0, 0.28) 100%);
 }
 
 .hero-decor {
@@ -474,6 +469,10 @@ section {
 
   .hero-decor {
     display: none;
+  }
+
+  .hero-visual img {
+    object-position: 78% center;
   }
 }
 
@@ -1600,16 +1599,16 @@ section {
 }
 
 /* Image color variants for simple story steps */
-.img-mountain {
-  background: linear-gradient(135deg, #8AA088 0%, #587056 50%, #2F4032 100%);
+.story-step .img-mountain {
+  background: url('/assets/rung_dong_giang.jpg') center/cover no-repeat;
 }
 
-.img-leaf {
-  background: linear-gradient(135deg, var(--gold) 0%, var(--sage-soft) 55%, var(--sage) 100%);
+.story-step .img-leaf {
+  background: url('/assets/ngon_che_day.jpg') center/cover no-repeat;
 }
 
-.img-roast {
-  background: linear-gradient(135deg, var(--soft-beige) 0%, var(--gold) 50%, #B89472 100%);
+.story-step .img-roast {
+  background: url('/assets/lop_moc_che_day.webp') center/cover no-repeat;
 }
 
 /* Pin label inside image (simple version uses .pin instead of .label) */
