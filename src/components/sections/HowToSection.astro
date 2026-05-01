@@ -1,0 +1,42 @@
+---
+const steps = [
+  {
+    num: '1',
+    title: 'Cho gói vào ly',
+    desc: 'Đặt một gói lọc 2,5g vào ly hoặc ấm. Mỗi gói pha được một ly 250ml, có thể hãm lại lần hai.',
+  },
+  {
+    num: '2',
+    title: 'Đổ nước sôi 80–90°C',
+    desc: 'Khoảng 200–250ml nước. Nước quá sôi (100°C) sẽ làm trà đắng gắt — để nguội một chút trước khi đổ.',
+  },
+  {
+    num: '3',
+    title: 'Đợi 5 phút, uống ấm',
+    desc: 'Trà có màu vàng nhạt trong, vị đắng dịu rồi ngọt hậu. Uống ấm là ngon nhất, có thể uống nguội.',
+  },
+];
+---
+<section class="howto" id="howto">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Cách pha</span>
+      <h2>Ba bước đơn giản để có một ly trà ngon</h2>
+      <p>Không cần dụng cụ phức tạp. Một gói lọc, một ly nước sôi, năm phút chờ.</p>
+    </div>
+
+    <div class="howto-grid">
+      {steps.map(s => (
+        <div class="howto-step">
+          <div class="num">{s.num}</div>
+          <h3>{s.title}</h3>
+          <p>{s.desc}</p>
+        </div>
+      ))}
+    </div>
+
+    <div class="howto-tip">
+      <strong>Gợi ý:</strong> Uống 2–3 gói mỗi ngày, tốt nhất sau bữa ăn 30 phút. Một hộp 7 gói đủ cho một tuần dùng đều.
+    </div>
+  </div>
+</section>

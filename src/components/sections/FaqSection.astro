@@ -1,0 +1,20 @@
+---
+import { faqs } from '../../data/faq';
+---
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Câu hỏi thường gặp</span>
+      <h2>Những điều bạn có thể đang thắc mắc</h2>
+    </div>
+
+    <div class="faq-list">
+      {faqs.map(item => (
+        <details class="faq-item">
+          <summary>{item.q}</summary>
+          <div class="answer" set:html={item.a} />
+        </details>
+      ))}
+    </div>
+  </div>
+</section>

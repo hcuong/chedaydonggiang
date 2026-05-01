@@ -1,0 +1,23 @@
+---
+import { uspCards } from '../../data/usp';
+---
+<section class="usp" id="usp">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Vì sao Đông Giang khác biệt</span>
+      <h2>Bốn lý do bạn không tìm thấy ở chè dây Cao Bằng</h2>
+      <p>Không phải mọi loại chè dây đều giống nhau. Đông Giang là vùng chè dây miền Trung duy nhất có nhãn hiệu được bảo hộ.</p>
+    </div>
+
+    <div class="usp-grid">
+      {uspCards.map(card => (
+        <article class="usp-card">
+          <span class="num">{card.num}</span>
+          <div class="icon">{card.icon}</div>
+          <h3>{card.title}</h3>
+          <p>{card.body}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

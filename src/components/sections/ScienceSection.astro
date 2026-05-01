@@ -1,0 +1,31 @@
+---
+const stats = [
+  { num: '18,15%', label: 'Flavonoid tổng' },
+  { num: '53,83%', label: 'Dihydromyricetin' },
+  { num: '8,9', label: 'Ngày trung bình\ncảm thấy dễ chịu' },
+];
+---
+<section class="science" id="science">
+  <div class="inner container">
+    <span class="eyebrow">Được ghi nhận trong nghiên cứu khoa học</span>
+    <h2>Chè dây — thảo dược ghi trong Dược điển Việt Nam V</h2>
+
+    <blockquote>
+      Chè dây chứa flavonoid 18,15% và dihydromyricetin 53,83% — hỗ trợ cảm giác dễ chịu vùng dạ dày sau 8,9 ngày sử dụng.
+      <cite>— GS Phạm Thanh Kỳ, Đại học Dược Hà Nội</cite>
+    </blockquote>
+
+    <div class="science-stats">
+      {stats.map(s => (
+        <div class="science-stat">
+          <div class="num">{s.num}</div>
+          <div class="label">{s.label}</div>
+        </div>
+      ))}
+    </div>
+
+    <p class="science-disclaimer">
+      Thực phẩm này không phải là thuốc và không có tác dụng thay thế thuốc chữa bệnh. Kết quả có thể khác nhau tùy cơ địa.
+    </p>
+  </div>
+</section>

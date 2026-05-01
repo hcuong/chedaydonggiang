@@ -1,0 +1,47 @@
+---
+import { site } from '../data/site';
+---
+<footer class="site-footer">
+  <div class="inner">
+    <div class="footer-disclaimer">
+      <strong>Lưu ý:</strong> Thực phẩm này không phải là thuốc và không có tác dụng thay thế thuốc chữa bệnh.
+      Kết quả có thể khác nhau tùy cơ địa. Sản phẩm đã công bố ATTP số: [...]
+    </div>
+
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="/assets/logo.png" alt={site.name}>
+        <p class="desc">{site.description}</p>
+        <div class="script">{site.tagline}</div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Sản phẩm</h4>
+        <a href="#sku">Hộp 7 gói</a>
+        <a href="#sku">Combo quà biếu</a>
+        <a href="#story">Câu chuyện thương hiệu</a>
+        <a href="#science">Cơ sở khoa học</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Hỗ trợ</h4>
+        <a href="#faq">Câu hỏi thường gặp</a>
+        <a href="#howto">Cách pha</a>
+        <p>Đổi trả trong 7 ngày</p>
+        <p>Giao toàn quốc 2–4 ngày</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Liên hệ</h4>
+        <p>{site.organization}</p>
+        <p>{site.address}</p>
+        <a href={site.shopeeUrl}>Mua trên Shopee →</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>© 2026 {site.name}. OCOP 4 Sao Quảng Nam.</div>
+      <div>Tự nhiên · Truyền thống · Đáng tin</div>
+    </div>
+  </div>
+</footer>

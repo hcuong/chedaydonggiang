@@ -1,0 +1,27 @@
+---
+import { storySteps } from '../../data/story';
+---
+<section class="story" id="story">
+  <div class="container">
+    <div class="story-header">
+      <span class="script">Câu chuyện một loại lá</span>
+      <h2>Từ rừng Cơ Tu đến tay bạn — minh bạch từng bước</h2>
+      <p>"Ra Zéh" trong tiếng Cơ Tu nghĩa là Chè Dây. Cây mọc hoang trên những triền núi Đông Giang, không ai trồng, không ai phun thuốc.</p>
+    </div>
+
+    <div class="story-steps">
+      {storySteps.map(step => (
+        <div class="story-step">
+          <div class="image">
+            <span class="label">{step.imageLabel}</span>
+          </div>
+          <div>
+            <div class="number">{step.number}</div>
+            <h3>{step.title}</h3>
+            {step.body.map(para => <p set:html={para} />)}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

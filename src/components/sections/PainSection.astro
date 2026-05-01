@@ -1,0 +1,52 @@
+---
+const problems = [
+  { icon: '😰', text: '<strong>Dạ dày khó chịu thường xuyên</strong> — sau bữa ăn, khi căng thẳng, hoặc lúc đêm khuya.' },
+  { icon: '😟', text: '<strong>Lo ngại uống thuốc tây dài ngày</strong> — muốn tìm giải pháp nhẹ nhàng từ thảo mộc.' },
+  { icon: '😕', text: '<strong>Không tin nguồn gốc "hữu cơ"</strong> trên Shopee — không biết phấn trắng là tốt hay là mốc.' },
+];
+const solutions = [
+  { icon: '✓', text: '<strong>Hỗ trợ cảm giác dễ chịu vùng dạ dày</strong>* — uống mỗi ngày như một loại trà.' },
+  { icon: '✓', text: '<strong>Thảo mộc thuần tự nhiên</strong> — không hương liệu, không phẩm màu, không chất bảo quản.' },
+  { icon: '✓', text: '<strong>QR truy xuất từng lô</strong> — xem được ngày thu hái, người làm, vùng nguyên liệu.' },
+];
+---
+<section class="pain" id="pain">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Bạn đang tìm gì?</span>
+      <h2>Vì sao bạn cần một loại trà thảo mộc đáng tin?</h2>
+      <p>Người Việt mệt với việc đoán xem mình đang uống đúng thứ — hay chỉ là cành lá không rõ nguồn gốc.</p>
+    </div>
+
+    <div class="pain-grid">
+      <div class="pain-col">
+        <h3>Điều bạn lo</h3>
+        <ul class="pain-list">
+          {problems.map(item => (
+            <li>
+              <span class="icon">{item.icon}</span>
+              <span class="text" set:html={item.text} />
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="pain-col solution">
+        <h3>Chè Dây Đông Giang giúp bạn</h3>
+        <ul class="pain-list">
+          {solutions.map(item => (
+            <li>
+              <span class="icon">{item.icon}</span>
+              <span class="text" set:html={item.text} />
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+
+    <p class="pain-disclaimer">
+      *Theo nghiên cứu của GS Phạm Thanh Kỳ, Đại học Dược Hà Nội — kết quả có thể khác nhau tùy cơ địa.
+      Sản phẩm không phải là thuốc và không có tác dụng thay thế thuốc chữa bệnh.
+    </p>
+  </div>
+</section>

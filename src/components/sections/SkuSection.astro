@@ -1,0 +1,45 @@
+---
+import { skuCards } from '../../data/sku';
+import { site } from '../../data/site';
+---
+<section class="sku" id="sku">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Sản phẩm</span>
+      <h2>Chọn hộp phù hợp với bạn</h2>
+      <p>Mỗi hộp đều cùng một nguyên liệu: ngọn chè dây hái tay, sao ủ 8 tiếng. Khác biệt chỉ ở dung lượng và mục đích sử dụng.</p>
+    </div>
+
+    <div class="sku-grid">
+      {skuCards.map(card => (
+        <article class={`sku-card${card.featured ? ' featured' : ''}`}>
+          <span class={`badge${card.badgeClass ? ` ${card.badgeClass}` : ''}`}>{card.badge}</span>
+          <div class="sku-image">
+            <img src="/assets/logo.png" alt="">
+          </div>
+          <div class="sku-body">
+            <span class="sku-tag">{card.tag}</span>
+            <h3 class="sku-title">{card.title}</h3>
+            <p class="sku-desc">{card.desc}</p>
+            <div class="sku-meta">
+              {card.meta.map(m => (
+                <span><span class="dot"></span> {m}</span>
+              ))}
+            </div>
+            <div class="sku-footer">
+              <div class="sku-price">
+                {card.priceOld && <span class="old">{card.priceOld}</span>}
+                {card.price}
+              </div>
+              <a href={site.shopeeUrl} class="btn btn-primary">Mua trên Shopee →</a>
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+
+    <p class="pain-disclaimer" style="margin-top: 32px;">
+      Freeship đơn từ 150k · Đổi trả trong 7 ngày nếu sản phẩm lỗi · Giao hàng toàn quốc 2–4 ngày
+    </p>
+  </div>
+</section>
