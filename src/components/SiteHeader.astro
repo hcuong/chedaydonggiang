@@ -1,11 +1,13 @@
 ---
+import { Image } from 'astro:assets';
 import { site } from "../data/site";
+import logoSrc from '../assets/logo.png';
 ---
 
 <header class="site-header">
   <div class="inner">
     <a href="#" class="brand">
-      <img src="/assets/logo.png" alt="Chè Dây Đông Giang" />
+      <Image src={logoSrc} alt="Chè Dây Đông Giang" height={38} />
       <span class="brand-text">{site.name}</span>
     </a>
     <nav>

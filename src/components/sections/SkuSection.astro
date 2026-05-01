@@ -1,6 +1,8 @@
 ---
+import { Image } from 'astro:assets';
 import { skuCards } from '../../data/sku';
 import { site } from '../../data/site';
+import logoSrc from '../../assets/logo.png';
 ---
 <section class="sku" id="sku">
   <div class="container">
@@ -15,7 +17,7 @@ import { site } from '../../data/site';
         <article class={`sku-card${card.featured ? ' featured' : ''}`}>
           <span class={`badge${card.badgeClass ? ` ${card.badgeClass}` : ''}`}>{card.badge}</span>
           <div class="sku-image">
-            <img src="/assets/logo.png" alt="">
+            <Image src={logoSrc} alt="" height={80} />
           </div>
           <div class="sku-body">
             <span class="sku-tag">{card.tag}</span>

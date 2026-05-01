@@ -1,5 +1,7 @@
 ---
+import { Image } from 'astro:assets';
 import { site } from "../../../data/site";
+import chedaySrc from '../../../assets/cheday_cotu.jpg';
 ---
 
 <section class="hero">
@@ -34,8 +36,8 @@ import { site } from "../../../data/site";
       </div>
 
       <div class="hero-visual">
-        <img
-          src="/assets/cheday_cotu.jpg"
+        <Image
+          src={chedaySrc}
           alt="Người phụ nữ Cơ Tu hái chè dây tại rừng Đông Giang, Quảng Nam"
           loading="eager"
           decoding="async"

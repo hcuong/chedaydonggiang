@@ -1,11 +1,13 @@
 ---
+import { Image } from 'astro:assets';
 import { site } from "../data/site";
+import logoSrc from '../assets/logo.png';
 ---
 
 <footer class="site-footer">
   <div class="footer-simple-inner">
     <div class="footer-mark">
-      <img src="/assets/logo.png" alt={site.name} />
+      <Image src={logoSrc} alt={site.name} height={48} />
       <span class="name">{site.name}</span>
     </div>
 
