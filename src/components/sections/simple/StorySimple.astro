@@ -1,5 +1,15 @@
 ---
+import { Image } from 'astro:assets';
 import { storyStepsSimple } from '../../../data/story-simple';
+import rungSrc from '../../../assets/rung_dong_giang.jpg';
+import ngonSrc from '../../../assets/ngon_che_day.jpg';
+import lopMocSrc from '../../../assets/lop_moc_che_day.webp';
+
+const imageMap = {
+  'img-mountain': rungSrc,
+  'img-leaf': ngonSrc,
+  'img-roast': lopMocSrc,
+};
 ---
 <section class="story" id="story">
   <header class="story-header">
@@ -9,7 +19,8 @@ import { storyStepsSimple } from '../../../data/story-simple';
   <div class="story-steps">
     {storyStepsSimple.map(step => (
       <article class="story-step">
-        <div class={`image ${step.imageClass}`}>
+        <div class="image">
+          <Image src={imageMap[step.imageClass as keyof typeof imageMap]} alt={step.pin} />
           <span class="pin">{step.pin}</span>
         </div>
         <div class="text">
@@ -26,4 +37,12 @@ import { storyStepsSimple } from '../../../data/story-simple';
   .story { padding: 104px 0 88px; }
   .story-header { max-width: var(--container); margin: 0 auto 72px; padding: 0 24px; }
   .story-steps { max-width: var(--container); margin: 0 auto; padding: 0 24px; gap: 80px; }
+  .story-step .image img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
 </style>

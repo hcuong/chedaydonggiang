@@ -321,7 +321,7 @@ section {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url('/assets/patterns.jpg');
+  background-image: var(--pattern-url);
   background-size: cover;
   background-position: right center;
   opacity: 0.08;
@@ -488,7 +488,7 @@ section {
   content: '';
   position: absolute;
   inset: 0;
-  background: url('/assets/patterns.jpg') center / cover;
+  background: var(--pattern-url) center / cover;
   opacity: 0.18;
 }
 
@@ -658,7 +658,7 @@ section {
   content: '';
   position: absolute;
   inset: 0;
-  background: url('/assets/patterns.jpg') center / cover;
+  background: var(--pattern-url) center / cover;
   opacity: 0.25;
   mix-blend-mode: multiply;
 }
@@ -857,7 +857,7 @@ section {
   content: '';
   position: absolute;
   inset: 0;
-  background: url('/assets/patterns.jpg') center / cover;
+  background: var(--pattern-url) center / cover;
   opacity: 0.18;
   mix-blend-mode: multiply;
 }
@@ -970,7 +970,7 @@ section {
   content: '';
   position: absolute;
   inset: 0;
-  background: url('/assets/patterns.jpg') center / cover;
+  background: var(--pattern-url) center / cover;
   opacity: 0.06;
 }
 
@@ -1305,7 +1305,7 @@ section {
   content: '';
   position: absolute;
   inset: 0;
-  background: url('/assets/patterns.jpg') center / cover;
+  background: var(--pattern-url) center / cover;
   opacity: 0.1;
 }
 
@@ -1576,7 +1576,7 @@ section {
   content: '';
   position: absolute;
   inset: 0;
-  background: url('/assets/patterns.jpg') center / cover;
+  background: var(--pattern-url) center / cover;
   opacity: 0.22;
 }
 
@@ -1598,18 +1598,6 @@ section {
   margin-bottom: 20px;
 }
 
-/* Image color variants for simple story steps */
-.story-step .img-mountain {
-  background: url('/assets/rung_dong_giang.jpg') center/cover no-repeat;
-}
-
-.story-step .img-leaf {
-  background: url('/assets/ngon_che_day.jpg') center/cover no-repeat;
-}
-
-.story-step .img-roast {
-  background: url('/assets/lop_moc_che_day.webp') center/cover no-repeat;
-}
 
 /* Pin label inside image (simple version uses .pin instead of .label) */
 .story-step .image .pin {
@@ -1642,7 +1630,7 @@ section {
   content: '';
   position: absolute;
   inset: 0;
-  background: url('/assets/patterns.jpg') center / cover;
+  background: var(--pattern-url) center / cover;
   opacity: 0.07;
 }
 
@@ -1715,7 +1703,7 @@ section {
   content: '';
   position: absolute;
   inset: 0;
-  background: url('/assets/patterns.jpg') center / cover;
+  background: var(--pattern-url) center / cover;
   opacity: 0.22;
   mix-blend-mode: multiply;
 }

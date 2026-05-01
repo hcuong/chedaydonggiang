@@ -1,6 +1,7 @@
 ---
 import { getImage } from 'astro:assets';
 import logoImg from '../assets/logo.png';
+import patternImg from '../assets/patterns.jpg';
 import '../styles/global.css';
 
 interface Props {
@@ -12,6 +13,7 @@ const {
   description = 'Trà chè dây Đông Giang Quảng Nam — chỉ 10cm ngọn đầu tiên, hái tay bởi người Cơ Tu, sao ủ 8 tiếng theo công thức truyền thống. OCOP 4 sao. Hộp 7 gói 65.000đ.',
 } = Astro.props;
 const favicon = await getImage({ src: logoImg, width: 64, height: 64, format: 'png' });
+const pattern = await getImage({ src: patternImg, format: 'webp', quality: 80 });
 ---
 <!doctype html>
 <html lang="vi">
@@ -25,7 +27,7 @@ const favicon = await getImage({ src: logoImg, width: 64, height: 64, format: 'p
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;700&family=Dancing+Script:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body style={`--pattern-url: url(${pattern.src})`}>
   <slot />
 </body>
 </html>
