@@ -1,0 +1,36 @@
+---
+import { site } from "../data/site";
+---
+
+<footer class="site-footer">
+  <div class="footer-simple-inner">
+    <div class="footer-mark">
+      <img src="/assets/logo.png" alt={site.name} />
+      <span class="name">{site.name}</span>
+    </div>
+
+    <!-- <div class="footer-block">
+      <h4>Liên hệ</h4>
+      <address>
+        {site.organization}<br />
+        {site.address}
+      </address>
+    </div> -->
+
+    <div class="footer-block">
+      <h4>Kênh bán hàng</h4>
+      <p>
+        <a href={site.shopeeUrl} class="footer-shopee">Mua hàng trên Shopee →</a
+        >
+      </p>
+    </div>
+
+    <!-- <div class="footer-simple-disclaimer">
+      <strong>Lưu ý</strong>
+      Thực phẩm này không phải là thuốc và không có tác dụng thay thế thuốc chữa bệnh.<br>
+      Đã công bố ATTP số: <span style="opacity:.5">[…]</span>
+    </div> -->
+
+    <div class="copyright">© 2026 {site.name}.</div>
+  </div>
+</footer>

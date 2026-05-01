@@ -1,0 +1,62 @@
+---
+import { site } from '../../../data/site';
+
+const galleryItems = [
+  { cls: 'g-1', cap: '01 · Hộp đóng nắp' },
+  { cls: 'g-2', cap: '02 · Hộp mở' },
+  { cls: 'g-3', cap: '03 · Túi lọc' },
+  { cls: 'g-4', cap: '04 · Ly trà đã pha' },
+];
+---
+<section class="product" id="product">
+  <div class="container">
+    <header class="product-header">
+      <div class="product-eyebrow">Sản phẩm</div>
+      <h2 class="product-title">Chè Dây Đông Giang</h2>
+      <div class="product-subtitle">Hộp 7 gói lọc</div>
+    </header>
+
+    <article class="product-card">
+      <div class="gallery" aria-hidden="true">
+        {galleryItems.map(g => (
+          <div class={`g ${g.cls}`}><span class="cap">{g.cap}</span></div>
+        ))}
+      </div>
+
+      <div class="product-body">
+        <div class="product-name-block">
+          <div class="product-name">Chè Dây Đông Giang</div>
+          <div class="product-pack">Hộp 7 gói lọc</div>
+        </div>
+
+        <div class="price-row" style="display:flex; align-items:baseline; gap:10px; margin-bottom:24px;">
+          <span class="price-amount">65.000đ</span>
+          <span class="price-unit">/ Hộp 7 gói</span>
+        </div>
+
+        <div class="product-desc">
+          <p>
+            Bảy gói lọc, mỗi gói 2,5 gam — đủ một tuần nếu bạn uống mỗi ngày một gói,
+            hoặc bốn ngày nếu uống sáng và tối. Pha với 200ml nước sôi, đợi 5 phút,
+            uống ấm. Có thể hãm lại lần hai.
+          </p>
+          <p>
+            Hộp giấy kraft in hoa văn thổ cẩm Cơ Tu. Bên trong có thiệp nhỏ
+            ghi tay tên người làm và ngày đóng gói.
+          </p>
+        </div>
+
+        <a href={site.shopeeUrl} class="btn btn-primary" aria-label="Mua trên Shopee">
+          Mua trên Shopee
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+
+        <div class="badge-line">
+          OCOP 4 sao Quảng Nam
+          <span class="sep">·</span>
+          Mỗi hộp có mã QR truy xuất nguồn gốc
+        </div>
+      </div>
+    </article>
+  </div>
+</section>

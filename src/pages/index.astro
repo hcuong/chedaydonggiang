@@ -1,20 +1,23 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import SiteHeader from '../components/SiteHeader.astro';
-import SiteFooter from '../components/SiteFooter.astro';
-import MobileCta from '../components/MobileCta.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import MobileCta from "../components/MobileCta.astro";
 
-import Hero from '../components/sections/Hero.astro';
-import PatternBanner from '../components/sections/PatternBanner.astro';
-import PainSection from '../components/sections/PainSection.astro';
-import StorySection from '../components/sections/StorySection.astro';
-import UspSection from '../components/sections/UspSection.astro';
-import SkuSection from '../components/sections/SkuSection.astro';
-import ScienceSection from '../components/sections/ScienceSection.astro';
-import ReviewsSection from '../components/sections/ReviewsSection.astro';
-import HowToSection from '../components/sections/HowToSection.astro';
-import FaqSection from '../components/sections/FaqSection.astro';
-import FinalCta from '../components/sections/FinalCta.astro';
+import Hero from "../components/sections/Hero.astro";
+import PatternBanner from "../components/sections/PatternBanner.astro";
+import PainSection from "../components/sections/PainSection.astro";
+import StorySection from "../components/sections/StorySection.astro";
+import UspSection from "../components/sections/UspSection.astro";
+import SkuSection from "../components/sections/SkuSection.astro";
+import ScienceSection from "../components/sections/ScienceSection.astro";
+import ReviewsSection from "../components/sections/ReviewsSection.astro";
+import HowToSection from "../components/sections/HowToSection.astro";
+import FaqSection from "../components/sections/FaqSection.astro";
+import FinalCta from "../components/sections/FinalCta.astro";
+import StorySimple from "../components/sections/simple/StorySimple.astro";
+import SiteFooterSimple from "../components/SiteFooterSimple.astro";
+import ProductSection from "../components/sections/simple/ProductSection.astro";
 ---
 
 <BaseLayout>
@@ -23,7 +26,9 @@ import FinalCta from '../components/sections/FinalCta.astro';
   <main>
     <Hero />
     <PatternBanner />
-    <PainSection />
+    <StorySimple />
+    <ProductSection />
+    <!-- <PainSection />
     <StorySection />
     <UspSection />
     <SkuSection />
@@ -31,9 +36,10 @@ import FinalCta from '../components/sections/FinalCta.astro';
     <ReviewsSection />
     <HowToSection />
     <FaqSection />
-    <FinalCta />
+    <FinalCta /> -->
   </main>
 
-  <SiteFooter />
+  <SiteFooterSimple />
+  <!-- <SiteFooter /> -->
   <MobileCta />
 </BaseLayout>

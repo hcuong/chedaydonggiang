@@ -1,0 +1,29 @@
+---
+import { storyStepsSimple } from '../../../data/story-simple';
+---
+<section class="story" id="story">
+  <header class="story-header">
+    <h2 class="story-title">Chuyện một loại lá ở rừng Đông Giang</h2>
+  </header>
+
+  <div class="story-steps">
+    {storyStepsSimple.map(step => (
+      <article class="story-step">
+        <div class={`image ${step.imageClass}`}>
+          <span class="pin">{step.pin}</span>
+        </div>
+        <div class="text">
+          <div class="number">{step.number}</div>
+          <h3>{step.title}</h3>
+          {step.body.map(para => <p set:html={para} />)}
+        </div>
+      </article>
+    ))}
+  </div>
+</section>
+
+<style>
+  .story { padding: 104px 0 88px; }
+  .story-header { max-width: var(--container); margin: 0 auto 72px; padding: 0 24px; }
+  .story-steps { max-width: var(--container); margin: 0 auto; padding: 0 24px; gap: 80px; }
+</style>

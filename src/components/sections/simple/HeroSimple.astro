@@ -1,0 +1,67 @@
+---
+import { site } from '../../../data/site';
+---
+<section class="hero">
+  <div class="hero-decor" aria-hidden="true">
+    <span style="height: 40px; background: var(--sage-soft);"></span>
+    <span style="height: 56px; background: var(--terracotta);"></span>
+    <span style="height: 72px; background: var(--gold-rich);"></span>
+    <span style="height: 88px; background: var(--forest-deep);"></span>
+    <span style="height: 64px; background: var(--gold);"></span>
+  </div>
+
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-eyebrow eyebrow">Đông Giang · Quảng Nam</div>
+        <h1 class="hero-tagline">
+          <span>Chỉ 10 phân ngọn đầu tiên.</span>
+          <span>Hái bằng tay người Cơ Tu.</span>
+          <span>Từ rừng Đông Giang, Quảng Nam.</span>
+        </h1>
+        <p class="hero-sub">Hộp 7 gói — 65.000đ. Đủ một tuần để bạn thử.</p>
+        <div class="hero-actions">
+          <a href={site.shopeeUrl} class="btn btn-primary" aria-label="Mua trên Shopee">
+            Mua trên Shopee
+            <span class="arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="label">
+          <span class="micro">Photo · Hero</span>
+          Bàn tay người Cơ Tu hái ngọn chè dây trên rừng Đông Giang, ánh sáng sớm mai
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero-visual { background: linear-gradient(135deg, #6E8769 0%, #3D5A4C 55%, #2F4032 100%); }
+  .hero-visual::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: url('/assets/patterns.jpg') center / cover;
+    opacity: 0.32; mix-blend-mode: multiply;
+  }
+  .hero-visual::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 30% 20%, rgba(255,255,255,0.12), transparent 55%),
+                linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.28) 100%);
+  }
+  .hero-visual .label {
+    position: absolute; left: 24px; bottom: 24px; right: 24px; z-index: 2;
+    font-family: var(--font-script); font-size: 24px; color: var(--cream);
+    line-height: 1.3; text-shadow: 0 2px 12px rgba(0,0,0,0.4);
+  }
+  .hero-visual .label .micro {
+    display: block; font-family: var(--font-body); font-size: 10px; font-weight: 700;
+    letter-spacing: 0.22em; text-transform: uppercase; color: rgba(249,246,240,0.7); margin-bottom: 6px;
+  }
+  @media (max-width: 900px) {
+    .hero-visual { order: -1; aspect-ratio: 5 / 4; }
+  }
+</style>
