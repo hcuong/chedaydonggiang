@@ -3,7 +3,7 @@ export const storyStepsSimple = [
     number: '01',
     imageClass: 'img-mountain',
     pin: 'Rừng Đông Giang',
-    title: 'Vì sao là Đông Giang',
+    title: 'Đông Giang',
     body: [
       `Mười mấy năm trước, dân Đông Giang chúng tôi còn sống bằng nghề trồng chè xanh và đi rừng.
        Một lần ngồi với mấy anh thợ vàng người Thái Nguyên trong lán trại, thấy họ phơi mấy bó lá lạ
@@ -18,8 +18,8 @@ export const storyStepsSimple = [
   {
     number: '02',
     imageClass: 'img-leaf',
-    pin: '10 phân ngọn đầu',
-    title: 'Vì sao chỉ 10 phân ngọn đầu',
+    pin: '10cm ngọn đầu tiên',
+    title: 'Chỉ 10cm ngọn đầu tiên',
     body: [
       `Cây chè dây có lá già, có cành, có cuộng. Nhưng phần quý nhất chỉ ở
        <strong>mười phân ngọn đầu tiên</strong> — chỗ lá còn non, còn nhiều phấn,
@@ -31,8 +31,8 @@ export const storyStepsSimple = [
   {
     number: '03',
     imageClass: 'img-roast',
-    pin: 'Sao ủ 8 tiếng',
-    title: 'Vì sao sao ủ 8 tiếng',
+    pin: 'Phấn trắng tự nhiên',
+    title: 'Sao ủ 8 tiếng',
     body: [
       `Lá hái về được rửa, hong, rồi sao ủ trong tám tiếng theo cách người trong vùng vẫn làm.
        Tám tiếng là vừa đủ để lá khô tới, dậy hương, và xuất hiện một
